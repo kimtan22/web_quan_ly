@@ -1,0 +1,119 @@
+:root {
+    --primary-color: #4e73df;
+    --secondary-color: #858796;
+    --success-color: #1cc88a;
+    --info-color: #36b9cc;
+    --warning-color: #f6c23e;
+    --danger-color: #e74a3b;
+    --light-color: #f8f9fc;
+    --dark-color: #5a5c69;
+    }
+    
+    body {
+    overflow-x: hidden;
+    }
+    
+    .wrapper {
+    display: flex;
+    min-height: 100vh;
+    }
+    
+    .sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: var(--primary-color);
+    color: #fff;
+    transition: all 0.3s;
+    }
+    
+    .sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    }
+    
+    .sidebar .nav-link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .sidebar .nav-link i {
+    font-size: 1.2rem;
+    margin-right: 12px;
+    }
+    
+    .sidebar-header {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    }
+    
+    #content {
+    flex: 1;
+    padding: 0;
+    background: var(--light-color);
+    }
+    
+    .card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+    }
+    
+    .card:hover {
+    transform: translateY(-2px);
+    }
+    
+    .progress {
+    height: 8px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.05);
+    }
+    
+    .table th {
+    font-weight: 600;
+    color: var(--secondary-color);
+    background-color: var(--light-color);
+    border-bottom-width: 1px;
+    }
+    
+    .table td {
+    vertical-align: middle;
+    }
+    
+    .dropdown-menu {
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    }
+    
+    .dropdown-item {
+    padding: 0.5rem 1.5rem;
+    transition: all 0.2s ease;
+    }
+    
+    .dropdown-item:active {
+    background-color: var(--primary-color);
+    }
+    
+    .btn {
+    border-radius: 8px;
+    }
+    
+    @media (max-width: 768px) {
+    .sidebar {
+    margin-left: -250px;
+    position: fixed;
+    z-index: 1000;
+    height: 100%;
+    }
+    
+    .sidebar.active {
+    margin-left: 0;
+    }
+    
+    #content {
+    width: 100%;
+    }
+    }
